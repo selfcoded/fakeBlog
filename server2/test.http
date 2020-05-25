@@ -1,0 +1,31 @@
+@url=http://localhost:3002
+
+
+@json=Content-Type: application/json
+
+
+###
+get {{url}}/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYzdkNjMyYzhiYzgzNjEzYjI5Y2Y0MiIsImlhdCI6MTU5MDE1NzIzMX0.eZfw_DdPbgA9UP2hnsTs8ZNV_2wNQLyqXnQ1RbZsCss
+
+###
+post {{url}}/register
+{{json}}
+
+{
+    "username":"user2",
+    "password":"123456"
+}
+
+###
+post {{url}}/login
+{{json}}
+
+{
+    "username":"user",
+    "password":"123"
+}
+
+###
+get {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYzdhMDdmMzkzZTYzNTQxMTliOWIzMSIsImlhdCI6MTU5MDE0MTIxNn0.LVhxWLKBhpTPAc-s7KGW6GVRYdiFUcJ_8rbZVFqF_Lo
